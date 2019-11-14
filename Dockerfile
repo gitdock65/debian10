@@ -1,7 +1,7 @@
 FROM debian:latest
 
-RUN apk update && \
-    apk add wget unzip && \
+RUN apt-get update && \
+    apt-get install wget unzip htop apache2 && \
     mkdir /tmp/alpinekesl && \
     cd /tmp/alpinekesl && \
     wget http://2016.eicar.org/download/eicar_com.zip && \
